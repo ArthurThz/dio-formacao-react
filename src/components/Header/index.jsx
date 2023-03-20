@@ -14,22 +14,34 @@ import {
 
 import Button from "../Button/Index";
 
-const Header = () => {
+const Header = ({ autenticado }) => {
   return (
     <Wrapper>
       <Container>
         <Row>
           <img src={logo} alt="logo da dio" />
-          <BuscarInputContainer>
-            <Input placeholder="Buscar..." />
-          </BuscarInputContainer>
-          <Menu>Live Code</Menu>
-          <Menu>Global</Menu>
+          {autenticado ? (
+            <>
+              <BuscarInputContainer>
+                <Input placeholder="Buscar..." />
+              </BuscarInputContainer>
+              <Menu>Live Code</Menu>
+              <Menu>Global</Menu>
+            </>
+          ) : null}
         </Row>
         <Row>
-          <MenuRight href="#">Home</MenuRight>
-          <Button title="Entrar" />
-          <Button title="Cadastrar" />
+          {autenticado ? (
+            <>
+              <UserPicture src="https://avatars.githubusercontent.com/u/89098685?s=400&u=c41d2a68f7568cfbe0bc39dee7b63a3d6ac66f52&v=4" />
+            </>
+          ) : (
+            <>
+              <MenuRight href="#">Home</MenuRight>
+              <Button title="Entrar" />
+              <Button title="Cadastrar" />
+            </>
+          )}
         </Row>
       </Container>
     </Wrapper>
