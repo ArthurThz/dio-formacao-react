@@ -8,6 +8,7 @@ import Header from "../../Header";
 import Input from "../../Input";
 
 import { api } from "../../../services/api";
+import { IFormData } from "./types";
 
 import { MdEmail, MdLock } from "react-icons/md";
 import {
@@ -42,12 +43,12 @@ const Login = () => {
     control,
     handleSubmit,
     formState: { errors, isValid },
-  } = useForm({
+  } = useForm<IFormData>({
     resolver: yupResolver(schema),
     mode: "onChange",
   });
 
-  const onSubmit = async (formData) => {
+  const onSubmit = async (formData: IFormData) => {
     try {
       const { data } = await api.get(
         `users?email=${formData.email}&senha=${formData.password}`

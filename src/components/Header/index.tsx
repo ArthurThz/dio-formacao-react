@@ -1,5 +1,6 @@
 import logo from "../../assets/logo-dio.png";
 
+import { IHeader } from "./type";
 import { useNavigate } from "react-router-dom";
 import {
   Container,
@@ -15,7 +16,7 @@ import {
 
 import Button from "../Button/Index";
 
-const Header = ({ autenticado }) => {
+const Header = ({ autenticado }: IHeader) => {
   const navigate = useNavigate();
 
   const handleNavigateLogin = () => {
