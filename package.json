@@ -6,12 +6,19 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "api" :"json-server --watch db.json -p 8001"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.0.0",
+    "axios": "^1.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^5.3.9"
+    "react-hook-form": "^7.43.7",
+    "react-icons": "^4.8.0",
+    "react-router-dom": "^6.9.0",
+    "styled-components": "^5.3.9",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
