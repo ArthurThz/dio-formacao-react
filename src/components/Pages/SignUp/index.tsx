@@ -3,6 +3,7 @@ import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { api } from "../../../services/api";
+import { IEvent } from "./types";
 
 import Header from "../../Header/index";
 import Input from "../../Input";
@@ -36,19 +37,19 @@ const schema = yup
 const SignUp = () => {
   const [userName, setUserName] = useState("");
 
-  const handleUserName = (event) => {
+  const handleUserName = (event: IEvent) => {
     let { value } = event.target;
     setUserName(value);
   };
 
   const [userEmail, setUserEmail] = useState("");
-  const handleUserEmail = (event) => {
+  const handleUserEmail = (event: IEvent) => {
     let { value } = event.target;
     setUserEmail(value);
   };
 
   const [userPassword, setUserPassword] = useState("");
-  const handleUserPassword = (event) => {
+  const handleUserPassword = (event: IEvent) => {
     let { value } = event.target;
     setUserPassword(value);
   };
@@ -67,7 +68,7 @@ const SignUp = () => {
     mode: "onChange",
   });
 
-  const Cadastrar = (event) => {
+  const Cadastrar = (event: any) => {
     event.preventDefault();
     const newUser = {
       id: Math.floor(Math.random() * 100),

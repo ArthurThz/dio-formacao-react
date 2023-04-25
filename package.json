@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "api" :"json-server --watch db.json -p 8001"
+    "api": "json-server --watch db.json -p 8001"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.0.0",
@@ -21,9 +21,13 @@
     "yup": "^1.0.2"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.5",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^5.0.2",
     "vite": "^4.2.0"
   }
 }
